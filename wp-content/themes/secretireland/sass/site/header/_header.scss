@@ -1,10 +1,19 @@
+.header-image {
+  max-height: 60vh;
+  overflow: hidden;
+  img {
+    display: block;
+    width: 100vw;
+  }
+}
+
 .site-header {
   position: relative;
   padding: 1em;
   font-family: $font__sans;
   color: #fff;
   background-color: $color__skin;
-  
+
 
   @media screen and (min-width: $query__small) {
     padding: 1em 2em;
