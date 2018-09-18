@@ -45,6 +45,7 @@ if ( ! function_exists( 'secretireland_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'header' => esc_html__( 'Header', 'secretireland' ),
+			'social' => esc_html__( 'Social Media Menu', 'secretireland' ),
 		) );
 
 		/*
