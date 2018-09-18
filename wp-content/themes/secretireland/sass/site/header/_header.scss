@@ -64,7 +64,8 @@
     justify-content: space-between;
   }
   .site-branding {
-    width: 35%
+    width: 35%;
+    flex: 1 0 auto;
   }
   .main-navigation {
     width: 55%;
