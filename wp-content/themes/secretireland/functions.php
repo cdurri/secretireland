@@ -74,10 +74,9 @@ if ( ! function_exists( 'secretireland_setup' ) ) :
 		 * @link https://codex.wordpress.org/Theme_Logo
 		 */
 		add_theme_support( 'custom-logo', array(
-			'height'      => 250,
-			'width'       => 250,
+			'width'      => 90,
+			'height'       => 90,
 			'flex-width'  => true,
-			'flex-height' => true,
 		) );
 	}
 endif;
