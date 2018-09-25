@@ -191,6 +191,8 @@ function secretireland_scripts() {
 		'collapse' => __( 'Collapse child menu', 'secretireland' ),
 	));
 
+	wp_enqueue_script( 'secretireland-functions', get_template_directory_uri() . '/js/functions.js', array('jquery'), '20180925', true );
+
 	wp_enqueue_script( 'secretireland-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
