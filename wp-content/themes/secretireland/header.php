@@ -23,11 +23,7 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'secretireland' ); ?></a>
-	<?php if(is_front_page() ) : ?>
-		<figure class="header-image">
-			<?php the_header_image_tag(); ?>
-		</figure><!-- .header-image -->
-	<?php endif; ?>
+
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
 			<?php the_custom_logo(); ?>
@@ -54,11 +50,27 @@
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'secretireland' ); ?></button>
 			<?php
 			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
+				'theme_location' => 'header',
 				'menu_id'        => 'primary-menu',
 			) );
 			?>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
+
+	<?php if(is_front_page() ) : ?>
+		<section class="hero">
+			<div class="hero__inner">
+				<div class="hero__header">
+					<h1 class="hero__headline">Secret Ireland</h1>
+				</div>
+				<div class="hero__content">
+					<p class="hero_tagline">Discover Ireland's forgotten history, hear reawakened stories and myths from yesteryear and stand on top of mountains that are carved into the Irish consciousness.</p>
+				</div>
+			</div>
+			<figure class="header-image">
+				<?php the_header_image_tag(); ?>
+			</figure><!-- .header-image -->
+		</section>
+	<?php endif; ?>
 
 	<div id="content" class="site-content">
