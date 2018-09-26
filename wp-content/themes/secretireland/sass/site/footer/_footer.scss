@@ -1,17 +1,19 @@
 .site-footer {
   position: relative;
-  padding: 1em;
+  padding: 5em 2.5em;
   font-family: $font__sans;
   color: #fff;
-  background-color: $color__skin;
+  background-color: $color__background-gray-dark;
   text-align: center;
 
   @media screen and (min-width: $query__small) {
-    padding: 1em 2em;
+    padding: 5em 2.5em;
   }
 }
 
 .social-menu {
+  display: flex;
+  justify-content: space-between;
   ul {
     display: flex;
     justify-content: center;
@@ -19,14 +21,63 @@
     margin: 0;
     padding: 0;
     a {
+      position: relative;
       display: block;
       padding: .5em 1em;
-      color: white;
+      color: transparent;
       text-decoration: none;
-      &:hover,
-      &:focus {
-        text-decoration: underline;
-      }
+    }
+    .ic-facebook:before, .ic-twitter:before, .ic-instagram:before {
+      position: relative;
+      top: 30px;
     }
   }
+}
+
+.site-footer__inner {
+  max-width: 945px;
+  margin: 0 auto;
+}
+
+.site-footer__about {
+  display: flex;
+}
+
+.site-footer__about-image {
+  padding-right: 30px;
+}
+
+.site-footer__about-headline {
+  font-size: 1.5rem;
+  margin-top: 0;
+}
+
+.site-footer__about-info {
+  font-size: .975rem;
+  max-width: 375px;
+  text-align: left;
+}
+
+.site-footer__mailing-headline {
+  font-size: 1.5em;
+  margin-top: 0;
+}
+
+.site-footer__mailing-cta {
+  display: flex;
+  flex-direction: column;
+}
+
+.site-footer__button {
+  margin-top: 10px;
+}
+
+.site-info {
+  padding-top: 60px;
+}
+
+.site-footer__button {
+  background: $color__cta-area;
+  border-color: $color__cta-area;
+  color: white;
 }
