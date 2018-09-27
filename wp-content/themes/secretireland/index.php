@@ -13,6 +13,7 @@
  */
 
 get_header();
+get_template_part( 'template-parts/three-column', 'part' );
 ?>
 
 	<div id="primary" class="content-area">
