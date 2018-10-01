@@ -58,12 +58,12 @@
 		&:hover {
 			text-decoration: none;
 		}
+		&.selected {
+			color: $color__link-visited;
+		}
 	}
 
-	a:hover,
-	a:focus {
-		color: $color__link-visited;
-	}
+
 
 	.current_page_item > a,
 	.current-menu-item > a,
