@@ -5,12 +5,12 @@ document.addEventListener('DOMContentLoaded', function() {
     navItems.forEach(function(elem) {
       niTitle.push(elem.innerHTML);
       elem.addEventListener('click', function() {
-        localStorage.setItem('NIState', niTitle.indexOf(elem.innerHTML));
+        sessionStorage.setItem('NIState', niTitle.indexOf(elem.innerHTML));
       });
     });
   }
   // bind to the onload event
   window.addEventListener('load', function() {
-    navItems[localStorage.getItem('NIState')].setAttribute('class', 'selected');
+    navItems[sessionStorage.getItem('NIState')].setAttribute('class', 'selected');
   });
 });
