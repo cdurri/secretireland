@@ -30,7 +30,16 @@
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php secretireland_post_thumbnail(); ?>
+	<?php
+	if ( has_post_thumbnail() ) { ?>
+	<figure class="featured-image full-bleed">
+		<?php
+		the_post_thumbnail('secretireland-full-bleed');
+		?>
+	</figure><!-- .featured-image full-bleed -->
+	<?php } ?>
+
+	
 
 	<div class="entry-content">
 		<?php
